@@ -1,5 +1,63 @@
-body{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins";
+}
+
+/* navbar styles */
+nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 30px 120px ;
+  padding-bottom: 10px;
+}
+.nav-title {
+  color: #3a3a3a;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+nav ul {
+  display: flex;
+  gap: 34px;
+  align-items: center;
+  list-style: none;
+  font-size: 1rem;
+  font-weight: 600;
+}
+nav ul li a {
+  text-decoration: none;
+  color: #3a3a3a;
+}
+
+/* responsive styles */
+/* mobile devices */
+@media screen and (max-width:576px) {
+    nav ,nav ul{
+        flex-direction: column;
+        align-items: center;
+    }
+    nav ul{
+        padding-left: 0px;
+    }
+    .nav-title{
+        text-wrap: nowrap;
+    }
+}
+
+/* tablet devices */
+@media screen and (min-width:576px) and (max-width:996px) {
+
+        nav {
+        flex-direction: column;
+        align-items: center;
+    }
+    nav ul{
+        padding-left: 0px;
+    }
+    .nav-title{
+        text-wrap: nowrap;
+    }
+}
 }
