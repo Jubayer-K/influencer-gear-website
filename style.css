@@ -3,6 +3,11 @@ body {
   padding: 0;
   box-sizing: border-box;
   font-family: "Poppins";
+  transition: all 0.2s linear;
+}
+
+* {
+  transition: all 0.2s linear;
 }
 
 /* navbar styles */
@@ -17,6 +22,9 @@ nav {
   font-size: 24px;
   font-weight: 700;
 }
+.nav-title:hover {
+  color: #e02c6d;
+}
 
 nav ul {
   display: flex;
@@ -25,6 +33,10 @@ nav ul {
   list-style: none;
   font-size: 1rem;
   font-weight: 600;
+}
+
+nav ul li:hover {
+  transform: translateY(5px);
 }
 nav ul li a {
   text-decoration: none;
@@ -73,6 +85,23 @@ nav ul li a {
   font-size: 1rem;
   font-weight: 700;
   cursor: pointer;
+  transition: all 0.2s linear;
+}
+.btn-prebook:hover {
+  background: #9e1f4d;
+}
+.banner-logo {
+  display: flex;
+  justify-content: space-around;
+  padding: 0px 100px;
+  margin-top: -150px;
+}
+.banner-logo img {
+  filter: grayscale(100%);
+}
+.banner-logo img:hover {
+  filter: grayscale(0%);
+  transform: scale(1.4);
 }
 
 /* responsive styles */
@@ -96,11 +125,11 @@ nav ul li a {
     font-size: 1.75rem;
     text-wrap: nowrap;
     line-height: normal;
-    
   }
-  .banner-description{
+  .banner-description {
     font-size: 0.875rem;
     margin-top: 30px;
+    text-wrap: nowrap;
   }
   .banner-container {
     flex-direction: column-reverse;
@@ -123,6 +152,17 @@ nav ul li a {
   .btn-prebook {
     margin: auto;
   }
+  .banner-logo{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    justify-items: center;
+    gap: 20px;
+    padding: 80px 5px;
+  }
+  .banner-logo img{
+    width: 60px;
+  }
+
 }
 
 /* tablet devices */
@@ -136,6 +176,7 @@ nav ul li a {
   }
   .nav-title {
     text-wrap: nowrap;
+    font-size: 3rem;
   }
   .banner {
     text-align: center;
@@ -144,9 +185,8 @@ nav ul li a {
     font-size: 2.75rem;
     text-wrap: nowrap;
     line-height: normal;
-    
   }
-  .banner-description{
+  .banner-description {
     font-size: 0.875rem;
     margin-top: 30px;
   }
@@ -170,5 +210,11 @@ nav ul li a {
   }
   .btn-prebook {
     margin: auto;
+  }
+  .banner-logo{
+    flex-wrap: wrap;
+    width: 480px;
+    gap: 20px;
+    margin: -50px auto;
   }
 }
