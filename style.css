@@ -221,6 +221,7 @@ nav ul li a {
   .content-title{
     text-wrap: nowrap;
     font-size: 1rem;
+    margin-top: -50px;
   }
   .card-container {
     display: flex;
